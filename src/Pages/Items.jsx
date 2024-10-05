@@ -23,7 +23,7 @@ const Items = ({ data, setdata, query, setquery }) => {
     setLoading(true);
     setError(null);  
     try {
-      const items = await axios('https://jsonplaceholder.typicode.com/posts');
+      const items = await axios.get('https://jsonplaceholder.typicode.com/posts');
       setdata(items.data);
       setLoading(false);
     } catch (error) {
@@ -79,9 +79,9 @@ const Items = ({ data, setdata, query, setquery }) => {
                   {item.title.length > 20 ? `${item.title.slice(0, 20)}...` : item.title}
                 </h1>
                 <Link to={`/specificpage/${item.id}`}>
-                  <button className='px-4 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 w-25'>
-                    view more
-                  </button>
+                  <button className='px-4 py-2 bg-blue-600 text-white  hover:bg-blue-700 transition duration-300 w-25 rounded-md'>
+                    view more data
+                  </button> 
                 </Link>
               </div>
             ))

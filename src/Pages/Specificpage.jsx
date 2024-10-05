@@ -20,9 +20,10 @@ const Specificpage = () => {
     }, []); 
 
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
+        <>
+       <div className='flex justify-center items-center w-full h-screen'>
             {data.title ? ( 
-                <div className="bg-white rounded-lg shadow-lg p-6 max-w-lg w-full">
+                <div className="rounded-lg  p-6 max-w-lg w-full">
                     <h1 className="text-2xl font-bold mb-4 text-gray-800">{data.title}</h1>
                     <p className="text-gray-600 mb-6">{data.body}</p>
                     <Link to='/' className="inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-500 transition duration-300">
@@ -35,7 +36,9 @@ const Specificpage = () => {
                     <p className="text-gray-600">Loading...</p> 
                 </div>
             )}
-        </div>
+            </div>
+      
+        </>
     );
 }
 

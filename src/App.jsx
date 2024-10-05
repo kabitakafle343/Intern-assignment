@@ -16,7 +16,7 @@ const App = () => {
 <BrowserRouter>
   <Routes>
   <Route path='/' element={<Items data={data} setdata={setdata}  query={query} setquery={setquery} />}>     </Route>
-    <Route path='/specificpage/:id' element={<Specificpage    />}>
+    <Route path='/specificpage/:id' element={<Specificpage/>}>
       
     </Route>
   </Routes>
